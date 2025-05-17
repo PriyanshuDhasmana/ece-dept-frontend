@@ -1,0 +1,133 @@
+.achievements-container {
+  max-width: auto;
+  margin: auto;
+  padding: 30px;
+  /* background: linear-gradient(145deg, #0a0b18, #0e1d3d); */
+  /* border-radius: 20px; */
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #0dcfff, #a74fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achievement-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #00f0ff33;
+}
+
+.achievement-form input,
+.achievement-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #00f0ff44;
+  border-radius: 8px;
+  background-color: rgba(0, 240, 255, 0.06);
+  color: white;
+  resize: vertical;
+}
+
+.achievement-form button {
+  padding: 12px;
+  font-weight: bold;
+  background-color: #00f0ff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.achievement-form button:hover {
+  transform: scale(1.05);
+  background-color: #3f7eff;
+}
+
+.achievement-list {
+  margin-top: 30px;
+}
+
+.achievement-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.achievement-card:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #00f0ff33;
+}
+
+.achievement-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #e7fc00;
+  text-align: center;
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  max-height: 4.2em;
+  color: #eee;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.achievement-card.expanded p {
+  white-space: pre-wrap;
+  max-height: 1000px;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .achievements-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .achievement-form input,
+  .achievement-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .achievement-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .achievement-card p {
+    font-size: 0.9rem;
+  }
+}

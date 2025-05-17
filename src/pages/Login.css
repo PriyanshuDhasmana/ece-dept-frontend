@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap');
+
+.login-container {
+  height: 100vh;
+  /* background: linear-gradient(135deg, #05020c, #011122); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  padding: 10px;
+}
+
+.login-box {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px 35px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: #fff;
+}
+
+.login-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(0, 255, 255, 0.1), transparent, rgba(0, 255, 255, 0.1));
+  animation: rotate 10s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-box h2 {
+  z-index: 1;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  background: linear-gradient(90deg, #00f0ff, #39eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.login-box form {
+  position: relative;
+  z-index: 1;
+}
+
+.login-box form input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.login-box form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.login-box form input:focus {
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.login-box form button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00f0ff, #00b8ff);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.login-box form button:hover {
+  background: linear-gradient(135deg, #00b8ff, #00f0ff);
+  box-shadow: 0 0 12px #00e6ff, 0 0 24px #00f0ff;
+}
+
+.error {
+  color: #ff4c4c;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 10px;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff4c4c; }
+  to { text-shadow: 0 0 10px #ff4c4c; }
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  z-index: 1;
+  position: relative;
+}
+
+.register-link a {
+  color: #00f0ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+
+.alumni-connect {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+}
+
+.alumni-connect p {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.alumni-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00f0ff, #00b8ff);
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.alumni-button:hover {
+  background: linear-gradient(135deg, #00b8ff, #00f0ff);
+  box-shadow: 0 0 12px #00e6ff, 0 0 24px #00f0ff;
+}
+
